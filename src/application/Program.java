@@ -10,7 +10,7 @@ public class Program {
 
 
         Department department = new Department(1, "Cars");
-        Seller seller = new Seller(1, "Joan", "joan@gmail.com", new Date(),3000.00, department);
+        Seller seller = new Seller(1, "Joan", "joan@gmail.com", new Date(), 3000.00, department);
 
         System.out.println(seller);
 
