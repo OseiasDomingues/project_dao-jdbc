@@ -10,15 +10,11 @@ import java.util.List;
 
 public class Program {
     public static void main(String[] args) {
-
-
-
-
         SellerDao sellerDao = DaoFactory.createSellerDao();
 
         System.out.println("=== Test 01 => findById ===");
-        Seller sellerById = sellerDao.findById(1);
-        System.out.println(sellerById);
+        Seller seller = sellerDao.findById(1);
+        System.out.println(seller);
 
         System.out.println("\n=== Test 02 => findByDepartment ===");
         Department department = new Department(2, null);
@@ -35,12 +31,15 @@ public class Program {
             System.out.println(s);
         }
 
-        System.out.println("\n=== Test 04 => findInsert ===");
+        System.out.println("\n=== Test 04 => insert ===");
         Seller newSeller = new Seller(null, "Peter", "peter@gmail.com", new Date(), 4000.00, department);
         sellerDao.insert(newSeller);
         System.out.println("Inserted! New id = " + newSeller.getId());
 
-
-
+        System.out.println("\n=== Test 05 => update ===");
+        seller = sellerDao.findById(8);
+        seller.setName("Peter Brown");
+        sellerDao.update(seller);
+        System.out.println("Update complete!");
     }
 }
