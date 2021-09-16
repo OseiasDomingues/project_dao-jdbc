@@ -28,6 +28,13 @@ public class Program {
             System.out.println(s);
         }
 
+        System.out.println("\n=== Test 03 => findByDepartment ===");
+        sellers = sellerDao.findAll();
+
+        for (Seller s : sellers){
+            System.out.println(s);
+        }
+
 
 
     }
