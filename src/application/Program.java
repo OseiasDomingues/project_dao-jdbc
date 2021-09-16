@@ -28,12 +28,17 @@ public class Program {
             System.out.println(s);
         }
 
-        System.out.println("\n=== Test 03 => findByDepartment ===");
+        System.out.println("\n=== Test 03 => findAll ===");
         sellers = sellerDao.findAll();
 
         for (Seller s : sellers){
             System.out.println(s);
         }
+
+        System.out.println("\n=== Test 04 => findInsert ===");
+        Seller newSeller = new Seller(null, "Peter", "peter@gmail.com", new Date(), 4000.00, department);
+        sellerDao.insert(newSeller);
+        System.out.println("Inserted! New id = " + newSeller.getId());
 
 
 
