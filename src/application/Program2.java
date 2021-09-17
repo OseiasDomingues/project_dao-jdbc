@@ -17,21 +17,21 @@ public class Program2 {
 //        departmentDao.insert(newDepartment);
 //        System.out.println("Inserted! New id = " + newDepartment.getId());
 
-        System.out.println("=== Test 02 => update ===");
+        System.out.println("\n=== Test 02 => update ===");
         Department department = departmentDao.findById(7);
         department.setName("Games");
         departmentDao.update(department);
         System.out.println("Update complete!");
 
-        System.out.println("=== Test 03 => delete ===");
+        System.out.println("\n=== Test 03 => delete ===");
         //departmentDao.deleteById(6);
         System.out.println("Delete complete!");
 
-        System.out.println("=== Test 04 => findById ===");
+        System.out.println("\n=== Test 04 => findById ===");
         department = departmentDao.findById(1);
         System.out.println(department);
 
-        System.out.println("=== Test 05 => findAll ===");
+        System.out.println("\n=== Test 05 => findAll ===");
 
         List<Department> departments = departmentDao.findAll();
 
